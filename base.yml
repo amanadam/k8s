@@ -5,9 +5,15 @@ kind: Pod
 metadata:
        labels:
             podname: secondpodlbl 
-       name: pod
+       name: pod1
 
 spec:
     containers:
             - name: secondpod
-              image: coolgourav147/nginx-custom   
+              image: coolgourav147/nginx-custom
+              env:
+               - name: variablefromcm
+                 valueFrom:
+                   configMapKeyRef:
+                           key: variable2
+                           name: envcm
