@@ -5,7 +5,7 @@ kind: Pod
 metadata:
        labels:
             podname: secondpodlbl 
-       name: pod1
+       name: pod2
 
 spec:
     containers:
@@ -17,3 +17,8 @@ spec:
                    configMapKeyRef:
                            key: variable2
                            name: envcm
+    tolerations:
+             - effect: "NoSchedule"
+               key: "mysize"
+               operator: "Equal"
+               value: "large"            
