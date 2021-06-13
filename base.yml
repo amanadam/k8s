@@ -4,7 +4,7 @@ kind: Pod
 
 metadata:
        labels:
-            podname: secondpodlbl 
+            podname: secondpod 
        name: pod2
 
 spec:
